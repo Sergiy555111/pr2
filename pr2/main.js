@@ -44,13 +44,11 @@ function formattedPhone(phone) {
     } else {
         return "Помилка: формат функції неправильний!";
     }
-
-    // Правила форматування[cite: 2]:
-    const country = "+38"; // після +38 має бути пропуск[cite: 2]
-    const operator = normalized.substring(2, 5); // три цифри (код оператору зв’язку) в круглих дужках[cite: 2]
-    const part1 = normalized.substring(5, 8); // три цифри[cite: 2]
-    const part2 = normalized.substring(8, 10); // мінус та цифри[cite: 2]
-    const part3 = normalized.substring(10, 12); // чотири цифри в кінці (розбиті на 2-2)[cite: 2]
+    const country = "+38";
+    const operator = normalized.substring(2, 5); 
+    const part1 = normalized.substring(5, 8);
+    const part2 = normalized.substring(8, 10); 
+    const part3 = normalized.substring(10, 12); 
 
     return `${country} (${operator}) ${part1}-${part2}-${part3}`;
 }
